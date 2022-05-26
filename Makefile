@@ -31,11 +31,11 @@ debug: $(OBJS)
 
 fclean: clean
 	rm -rf $(NAME)
-	rm -rf libft.a
-	make fclean -C libft/
+	rm -rf $(FORDER)libft.a
+	make fclean -C $(FORDER)libft/
 
 clean:
 	rm -rf $(OBJS)
-	make clean -C libft/
+	make clean -C $(FORDER)libft/
 
 re: fclean all
